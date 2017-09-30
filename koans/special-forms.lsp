@@ -115,9 +115,13 @@
   (assert-equal ____ c))
 
 (defun cartoon-dads (input)
-    "you should be able to complete this case statement"
+  "you should be able to complete this case statement"
   (case input (:this-one-doesnt-happen :fancy-cat)
-              (t :unknown)))
+        (:bart :homer)
+        (:stewie :peter)
+        (:stan :randy)
+        (:space-ghost :unknown)
+        (t :unknown)))
 
 (define-test test-your-own-case-statement
     "fix this by completing the 'cartoon-dads' function above"
@@ -132,9 +136,9 @@
      the implications of this in the equality-distinctions lesson"
   (let* ((name "John")
          (lastname (case name ("John" "Doe")
-                              ("Max" "Mustermann")
-                              (t "Anonymous"))))
-  (assert-equal ____ lastname)))
+                         ("Max" "Mustermann")
+                         (t "Anonymous"))))
+    (assert-equal "Anonymous" lastname)))
 
 (define-test test-cond
     "cond is the general purpose form for checking multiple
@@ -144,4 +148,4 @@
         (cond ((> a 0) :positive)
               ((< a 0) :negative)
               (t :zero)))
-  (assert-equal ____ c))
+  (assert-equal :positive c))
