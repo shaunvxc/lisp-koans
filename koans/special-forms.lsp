@@ -58,8 +58,8 @@
 
 (define-test test-let-default-value
     "let vars have a default value"
-    (let ((x))
-      (assert-equal ___ x)))
+  (let ((x))
+    (assert-equal () x)))
 
 (define-test test-let-bindings-are-parallel
     "When defining the bindings in the let form, later bindings may not depend
